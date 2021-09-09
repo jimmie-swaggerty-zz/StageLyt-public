@@ -27,7 +27,7 @@ const Main = (props) => {
             {/* <Banner /> */}
             <div id="events">
                 {loaded && <Slider title="Upcoming Events" divid="events" childstyle="col-lg-3 col-md-4 col-12" banner={true} bottomBorder={true} icon={faTicketAlt} exState={true}>
-                    {events && events.map((event, idx) => {
+                    {events.length>0 && events.map((event, idx) => {
                         return (
                             <EventCard event_id={event.id} />
                         )

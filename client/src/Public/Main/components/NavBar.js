@@ -130,7 +130,7 @@ const NavBar = (props) => {
                             </li>
 
                         }
-                        {!globalState.user.loggedIn && <GoogleLogin onSuccess={success} onFailure={error} clientId={clientId} isSignedIn={true} render={renderProps => (
+                        {!globalState.user.loggedIn && <GoogleLogin onSuccess={success} onFailure={error} clientId={clientId} isSignedIn={false} render={renderProps => (
                             <li>
                                 <div className="nav-link text-center" type="button" onClick={renderProps.onClick} >
                                     <FontAwesomeIcon icon={faSignInAlt} className="fa-2x" />

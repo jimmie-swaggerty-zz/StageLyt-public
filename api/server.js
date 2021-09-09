@@ -17,8 +17,7 @@ app.use(bodyParser.json());
 // parse requests of content-type: application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: true }));
 
-// app.use(express.static(__dirname+'/UploadedImages'));
-// app.use(express.static(__dirname+'/api'));
+app.use(express.static(__dirname+'/api'));
 
 const port = process.env.MY_PORT
 
