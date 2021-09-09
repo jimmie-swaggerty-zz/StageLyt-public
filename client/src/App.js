@@ -34,44 +34,44 @@ function App() {
         <div className="App">
             <StateProvider>
                 <Router>
-                <Route exact path="/">
-                            <ComingSoon/>
-                        </Route>
+                    <Route exact path="/">
+                        <ComingSoon />
+                    </Route>
                     <Route exact path="/home">
-                    <nav>
-                    <NavBar/>
-                    </nav>
-                    <Switch>
-                        <Route exact path="/home">
-                            <Main />
-                        </Route>
+                        <nav>
+                            <NavBar />
+                        </nav>
+                        <Switch>
+                            <Route path="/">
+                                <Main />
+                            </Route>
 
-                        <Route path="/events">
-                            <Events />
-                        </Route>
-                        <Route path="/cities">
-                            <Cities/>
-                        </Route>
-                        <Route path="/venues">
-                            <Venues />
-                        </Route>  
-                        <Route path="/producers">
-                            <Producers />
-                        </Route>
-                        <Route path="/artists">
-                            <Artists />
-                        </Route>
-                        <Route path="/dashboard">
-                            <Dashboard />
-                        </Route>
-                        <Route path="/city/:id">
-                            <City />
-                        </Route>
-                        <Route path="/:id">
-                            <Page />
-                        </Route>
-                    </Switch>
-                    <Footer />
+                            <Route path="/events">
+                                <Events />
+                            </Route>
+                            <Route path="/cities">
+                                <Cities />
+                            </Route>
+                            <Route path="/venues">
+                                <Venues />
+                            </Route>
+                            <Route path="/producers">
+                                <Producers />
+                            </Route>
+                            <Route path="/artists">
+                                <Artists />
+                            </Route>
+                            <Route path="/dashboard">
+                                <Dashboard />
+                            </Route>
+                            <Route path="/city/:id">
+                                <City />
+                            </Route>
+                            <Route path="/:id">
+                                <Page />
+                            </Route>
+                        </Switch>
+                        <Footer />
                     </Route>
                 </Router>
             </StateProvider>

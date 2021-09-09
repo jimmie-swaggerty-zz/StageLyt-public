@@ -12,7 +12,7 @@ const NavBar = (props) => {
     const clientId = process.env.REACT_APP_CLIENT_ID
 
     const success = async response => {
-        const res = await fetch("http://localhost:8080/api/v1/auth/google", {
+        const res = await fetch("http://localhost:8000/api/v1/auth/google", {
             method: "POST",
             body: JSON.stringify({
                 token: response.tokenId
@@ -130,7 +130,7 @@ const NavBar = (props) => {
                             </li>
 
                         }
-                        {!globalState.user.loggedIn && <GoogleLogin onSuccess={success} onFailure={error} clientId={clientId} isSignedIn={true} render={renderProps => (
+                        {!globalState.user.loggedIn && <GoogleLogin onSuccess={success} onFailure={error} clientId={clientId} isSignedIn={false} render={renderProps => (
                             <li>
                                 <div className="nav-link text-center" type="button" onClick={renderProps.onClick} >
                                     <FontAwesomeIcon icon={faSignInAlt} className="fa-2x" />

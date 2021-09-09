@@ -15,7 +15,7 @@ const PageBookingListItem = (props) => {
     const [loaded, setLoaded] = useState(false)
     useEffect(() => {
         axios
-            .get(`http://localhost:8080/api/bookings/${booking_id}`)
+            .get(`http://localhost:8000/api/bookings/${booking_id}`)
             .then((res) => {
                 console.log("booking", res.data);
                 setBooking(res.data);
@@ -29,7 +29,7 @@ const PageBookingListItem = (props) => {
     const acceptGig = (status) => {
         console.log(booking.id)
         console.log(status)
-        axios.put(`http://localhost:8080/api/bookings/accept/${booking.id}`, { status: status })
+        axios.put(`http://localhost:8000/api/bookings/accept/${booking.id}`, { status: status })
             .then((res) => {
                 console.log("booking info booking", res.data);
                 updateBooking()
@@ -43,7 +43,7 @@ const PageBookingListItem = (props) => {
 
     useEffect(() => {
         axios
-            .get(`http://localhost:8080/api/events/${booking.event_id}`)
+            .get(`http://localhost:8000/api/events/${booking.event_id}`)
             .then((res) => {
                 console.log("event", res.data);
                 setEvent(res.data);
@@ -56,7 +56,7 @@ const PageBookingListItem = (props) => {
     
 const updateBooking = () => {
     axios
-    .get(`http://localhost:8080/api/bookings/${booking_id}`)
+    .get(`http://localhost:8000/api/bookings/${booking_id}`)
     .then((res) => {
         console.log("booking", res.data);
         setBooking(res.data);
