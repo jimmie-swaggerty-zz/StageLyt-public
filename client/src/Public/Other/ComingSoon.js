@@ -7,7 +7,7 @@ const ComingSoon = () => {
             <div className="m-4 bg-dark align-middle justify-content-around" style={{ height: "100%" }}>
                 <div className="">
                     <div className=""><h1 className="text-center text-white">Coming Soon</h1></div>
-                    <div className=""><img src={logo} width="600px" /></div>
+                    <div className=""><img src={logo} width=".9vw" /></div>
                 </div>
             </div>
         </div>
