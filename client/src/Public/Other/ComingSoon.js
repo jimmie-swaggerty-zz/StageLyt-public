@@ -26,16 +26,16 @@ const ComingSoon = () => {
     };
 
     return (
-        <div className="container align-middle d-flex bg-dark" style={{ minHeight: "100vh", minWidth: "100vw" }}>
-            <div className="m-4 bg-dark align-middle justify-content-around" style={{ height: "100%" }}>
+        <div className="container align-middle bg-dark" style={{ minHeight: "100vh", minWidth: "100vw" }}>
+            <div className="bg-dark align-middle justify-content-around d-flex" style={{ height: "100%" }}>
                 <div className="w-100 text-center">
-                    <div className=""><h1 className="text-center text-white">Coming Soon</h1></div>
+                    <div className="mt-5"><h1 className="text-center text-white">Coming Soon</h1></div>
                     <div className="mb-5"><img src={logo} width="90%" /></div>
                     <div className="">
                         <h4 className="text-center text-white mb-3">Subscribe for Updates</h4>
                         <form onSubmit={e => { e.preventDefault(); submit(e) }}>
                             <div className="row justify-content-center">
-                                <div className="col-lg-3 col-6">
+                                <div className="col-lg-3 col-md-6 col-11">
                                     <div className="mb-3">
                                         <input type="text" name="name" placeholder="Name" className="form-control text-center" onChange={e => { e.preventDefault(); inputChange(e) }} />
                                     </div>
@@ -61,8 +61,10 @@ const ComingSoon = () => {
                     </div>
                 </div>
             </div>
-            <div className="mb-3 text-center fixed-bottom">
-                <h6 className="text-white">Brought to you by <a href="https://QueerCoded.net" target="_blank" className="decoration-none link-light">QueerCoded, Inc</a></h6>
+            <div className="row">
+                <div className="mt-5 mb-2 text-center col-12">
+                    <h6 className="text-white">Brought to you by <a href="https://QueerCoded.net" target="_blank" className="decoration-none link-light">QueerCoded, Inc</a></h6>
+                </div>
             </div>
         </div>
     )
