@@ -8,7 +8,7 @@ module.exports = (app) => {
         const { token } = req.body;
         const ticket = await client.verifyIdToken({
             idToken: token,
-            audience: process.env.CLIENT_ID,
+            audience: process.env.REACT_APP_CLIENT_ID,
         });
         const { email } = ticket.getPayload();
 
