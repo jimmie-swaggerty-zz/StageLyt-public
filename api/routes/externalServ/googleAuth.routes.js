@@ -12,7 +12,7 @@ module.exports = (app) => {
         });
         const { email } = ticket.getPayload();
 
-        let searchedUser = []
+        let searchedUser = [] 
         let searchedUserData = []
         sql.query(
             `SELECT * FROM users WHERE email = ?`, email, (err, res) => {

@@ -10,7 +10,7 @@ const UpcomingEvents = (props) => {
     // const {myPokes} = props
     useEffect(() => {
         axios
-            .get(`http://localhost:8080/api/events`)
+            .get(`process.env.REACT_APP_URL:8080/api/events`)
             .then((res) => {
                 console.log(res.data);
                 setEvents(res.data);

@@ -6,7 +6,7 @@ const path = require('path')
 // Create and Save a new Image{
 exports.create = (req, res, next) => {
 
-    // const url = 'http://localhost:3000'
+    // const url = 'process.env.REACT_APP_URL:3000'
     const url = req.protocol + '://' + req.get('host')
     // console.log("url",url)
     // console.log("req.file",req)

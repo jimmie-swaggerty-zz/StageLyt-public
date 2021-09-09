@@ -11,7 +11,7 @@ const PageUpdate = (props) => {
   console.log(id)
   const updateHandler=(data)=>{
               // do some stuff
-              axios.put(`http://localhost:8080/api/pages`, data ,{})
+              axios.put(`process.env.REACT_APP_URL:8080/api/pages`, data ,{})
               .then((res) => {
                 console.log(res.data);
                 history.push(`/${id}`)
@@ -23,7 +23,7 @@ const PageUpdate = (props) => {
   }
   useEffect(() => {
       axios
-          .get(`http://localhost:8080/api/pages/${id}`)
+          .get(`process.env.REACT_APP_URL:8080/api/pages/${id}`)
           .then((res) => {
               console.log("res data for page form",res.data);
              setInitialData(res.data);

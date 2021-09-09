@@ -16,7 +16,7 @@ const Login2 = () => {
     const clientId = "883754731797-ob7426hf5nn8gei88kvm2po4nct6bqkl.apps.googleusercontent.com"
 
     const success = async response => {
-        const res = await fetch("http://localhost:8080/api/v1/auth/google", {
+        const res = await fetch("process.env.REACT_APP_URL:8080/api/v1/auth/google", {
             method: "POST",
             body: JSON.stringify({
                 token: response.tokenId

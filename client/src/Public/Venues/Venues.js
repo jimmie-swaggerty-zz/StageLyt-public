@@ -10,7 +10,7 @@ const Venues = (props) => {
     // const {myPokes} = props
     useEffect(() => {
         axios
-            .get(`http://localhost:8080/pages/category/venue`)
+            .get(`process.env.REACT_APP_URL:8080/pages/category/venue`)
             .then((res) => {
                 console.log(res.data);
                 setPages(res.data);

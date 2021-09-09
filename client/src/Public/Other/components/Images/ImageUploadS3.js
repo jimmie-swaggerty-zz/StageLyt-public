@@ -36,7 +36,7 @@ const ImageUploadS3 = (props) => {
     //     let ext = path.extname(file.name)
     //     console.log("ext", ext)
     //     let newFileName = uuid()
-    //     axios.post('http://localhost:8080/api/s3images/upload',
+    //     axios.post('process.env.REACT_APP_URL:8080/api/s3images/upload',
     //         {
     //             fileName: newFileName,
     //             fileType: ext

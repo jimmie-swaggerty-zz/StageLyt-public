@@ -9,7 +9,7 @@ const VenuesFollowedScroll = (props) => {
     const [loaded, setLoaded] = useState(false)
 
     useEffect(()=> {
-        axios.get('http://localhost:8080/venues')
+        axios.get('process.env.REACT_APP_URL:8080/venues')
         .then((res) => {
             console.log(res.data);
             setVenues(res.data)

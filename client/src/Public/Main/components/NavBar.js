@@ -12,7 +12,7 @@ const NavBar = (props) => {
     const clientId = process.env.REACT_APP_CLIENT_ID
 
     const success = async response => {
-        const res = await fetch("http://localhost:8080/api/v1/auth/google", {
+        const res = await fetch("${process.env.REACT_APP_URL}:8080/api/v1/auth/google", {
             method: "POST",
             body: JSON.stringify({
                 token: response.tokenId

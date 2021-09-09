@@ -17,7 +17,7 @@ const MyEvents = (props) => {
         const globalDispatch = globalStateAndDispatch.dispatch
         
         useEffect(()=>{
-            axios.get('http://localhost:8080/api/events/').then((res) => {
+            axios.get('process.env.REACT_APP_URL:8080/api/events/').then((res) => {
                 console.log(res.data);
                 setEvents(res.data);
             })
