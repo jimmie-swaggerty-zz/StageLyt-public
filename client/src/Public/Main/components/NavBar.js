@@ -3,7 +3,7 @@ import { store } from '../../../context/StateProvider'
 import { NavLink } from "react-router-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSlidersH, faHome, faPalette, faCity, faTicketAlt, faStar, faSignInAlt, faSignOutAlt, faUpload, faUserCircle, faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons'
-import logo from '../../../Images/bookdivawhite.png'
+import logo from '../../../Images/icononly.png'
 import { GoogleLogin, GoogleLogout } from "react-google-login";
 const NavBar = (props) => {
     const globalStateAndDispatch = useContext(store)

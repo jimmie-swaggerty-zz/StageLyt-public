@@ -24,7 +24,7 @@ const Main = (props) => {
     }, [])
     return (
         <div className="m-3">
-            <Banner />
+            {/* <Banner /> */}
             <div id="events">
                 {loaded && <Slider title="Upcoming Events" divid="events" childstyle="col-lg-3 col-md-4 col-12" banner={true} bottomBorder={true} icon={faTicketAlt} exState={true}>
                     {events && events.map((event, idx) => {
