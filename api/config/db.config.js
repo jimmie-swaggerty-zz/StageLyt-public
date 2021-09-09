@@ -13,10 +13,10 @@
 //   };
 
   module.exports = {
-    HOST: "bookdiva.cal8jirlbdvh.us-east-2.rds.amazonaws.com",
+    HOST: "stagelyt.cal8jirlbdvh.us-east-2.rds.amazonaws.com",
     USER: "admin",
     PASSWORD: process.env.MY_PASSWORD,
-    DB: "bookdiva",
+    DB: "stagelyt",
     dialect: "mysql",
     pool: {
       max: 5,
