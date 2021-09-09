@@ -18,8 +18,8 @@ const handleChangeStatus = (files) => {
 
     axios
         .post(
-            // `http://localhost:8080/api/images/profile/${profileid}`,
-            `http://localhost:8080/api/image`,
+            // `http://localhost:8000/api/images/profile/${profileid}`,
+            `http://localhost:8000/api/image`,
             formData,
             {
                 headers: {

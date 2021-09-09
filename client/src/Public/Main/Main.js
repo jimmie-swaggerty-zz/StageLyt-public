@@ -12,7 +12,7 @@ const Main = (props) => {
     const [loaded, setLoaded] = useState(false)
     //pull events
     useEffect(() => {
-        axios.get(`http://localhost:8080/api/events`)
+        axios.get(`http://localhost:8000/api/events`)
             .then((res) => {
                 console.log("res data get events", res.data);
                 setEvents(res.data)
