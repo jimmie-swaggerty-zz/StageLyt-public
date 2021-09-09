@@ -1,11 +1,11 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faImage } from "@fortawesome/free-solid-svg-icons";
-import banner1 from '../../../Images/shop.jpg'
-import banner2 from '../../../Images/building.jpg'
-import banner3 from '../../../Images/seating.jpg'
 
 const Banner = (props) => {
+    const banner1 = ""
+    const banner2 = ""
+    const banner3 = ""
     const data = [
         { "name": "ON EVERY STREET CORNER", "status": "active", banner: banner1 },
         { "name": "IN EVERY NEIGHBORHOOD", banner: banner2 },

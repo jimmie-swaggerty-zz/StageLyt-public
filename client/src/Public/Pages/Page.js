@@ -1,17 +1,11 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import { useParams } from 'react-router-dom'
-import ArtistPage from './views/ArtistPage'
-import ProducerPage from './views/ProducerPage'
-import VenueLink from '../Events/components/VenueLink'
-import VenuePage from './views/VenuePage'
 import ImageDisplayS3 from '../Other/components/Images/ImageDisplayS3'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faFacebookF, faInstagram, faTiktok, faTwitter } from '@fortawesome/free-brands-svg-icons'
 import Slider from '../Other/components/Slider'
 import EventCard from '../Events/components/EventCard'
-import defaultBanner from '../../Images/default-banner.png'
-import CityLink from './components/CityLink'
 import { faTicketAlt } from '@fortawesome/free-solid-svg-icons'
 import Header from '../Other/components/Header'
 
@@ -20,6 +14,7 @@ const Page = (props) => {
     const [events, setEvents] = useState([])
     const [type, setType] = useState("")
     const { id } = useParams()
+    const defaultBanner =""
 
     useEffect(() => {
         axios.get(`http://localhost:8080/api/pages/${id}`)
