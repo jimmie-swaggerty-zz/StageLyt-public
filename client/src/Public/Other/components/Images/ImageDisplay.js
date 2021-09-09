@@ -14,7 +14,7 @@ const ImageDisplayS3 = (props) => {
     },[displayImage])
 
     useEffect(() => {
-        axios.get(`process.env.REACT_APP_URL:8080/api/image/${imageURL}`)
+        axios.get(`http://localhost:8080/api/image/${imageURL}`)
             .then((res) => {
                 setDisplayImage(res.data)
                 console.log("get data", res.data)

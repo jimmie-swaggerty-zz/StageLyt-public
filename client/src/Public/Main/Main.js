@@ -10,10 +10,9 @@ const Main = (props) => {
 
     const [events, setEvents] = useState([])
     const [loaded, setLoaded] = useState(false)
-    console.log(process.env.REACT_APP_URL)
     //pull events
     useEffect(() => {
-        axios.get(`${process.env.REACT_APP_URL}:8080/api/events`)
+        axios.get(`http://localhost:8080/api/events`)
             .then((res) => {
                 console.log("res data get events", res.data);
                 setEvents(res.data)

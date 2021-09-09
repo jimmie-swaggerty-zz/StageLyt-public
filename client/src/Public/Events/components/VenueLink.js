@@ -8,7 +8,7 @@ const VenueLink = (props) => {
 
 
     useEffect(() => {
-        axios.get(`process.env.REACT_APP_URL:8080/api/pages/${id}`)
+        axios.get(`http://localhost:8080/api/pages/${id}`)
             .then((res) => {
                 console.log("res data get venue", res.data);
                 setVenue(res.data)

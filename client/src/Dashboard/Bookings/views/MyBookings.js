@@ -17,7 +17,7 @@ const MyBookings = () => {
 
     //get pages owned
     useEffect(() => {
-        axios.get(`process.env.REACT_APP_URL:8080/api/pages/mypages/${user_id}`)
+        axios.get(`http://localhost:8080/api/pages/mypages/${user_id}`)
             .then((res) => {
                 console.log(res.data)
                 setPages(res.data)

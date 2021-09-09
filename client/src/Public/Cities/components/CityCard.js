@@ -14,7 +14,7 @@ const CityCard = (props) => {
 
     //pull city profiles
     useEffect(() => {
-        axios.get(`process.env.REACT_APP_URL:8080/api/cities/${city_id}`)
+        axios.get(`http://localhost:8080/api/cities/${city_id}`)
             .then((res) => {
                 console.log("res data get cities", res.data);
                 setCity(res.data)

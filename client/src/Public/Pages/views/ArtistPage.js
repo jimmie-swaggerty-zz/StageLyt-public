@@ -13,7 +13,7 @@ const ArtistPage = (props) => {
     const { id } = useParams()
 
     useEffect(() => {
-        axios.get(`process.env.REACT_APP_URL:8080/api/pages/${id}`)
+        axios.get(`http://localhost:8080/api/pages/${id}`)
             .then((res) => {
                 console.log(res.data)
                 setData(res.data)
@@ -21,7 +21,7 @@ const ArtistPage = (props) => {
     }, [id])
 
     useEffect(() => {
-        axios.get(`process.env.REACT_APP_URL:8080/api/events/byprofile/${id}`)
+        axios.get(`http://localhost:8080/api/events/byprofile/${id}`)
             .then((res) => {
                 console.log(res.data)
                 setEvents(res.data)

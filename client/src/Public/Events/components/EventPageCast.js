@@ -11,7 +11,7 @@ const EventPageCast = (props) => {
     const [cast, setCast] = useState([])
     const history = useHistory()
     useEffect(() => {
-        axios.get(`process.env.REACT_APP_URL:8080/api/bookings/events/approve/${props.id}`)
+        axios.get(`http://localhost:8080/api/bookings/events/approve/${props.id}`)
             .then((res) => {
                 console.log(res)
                 setCast(res.data)

@@ -35,8 +35,8 @@ const ImageUploadS3 = (props) => {
 
         axios
             .post(
-                // `process.env.REACT_APP_URL:8080/api/images/profile/${profileid}`,
-                `process.env.REACT_APP_URL:8080/api/image`,
+                // `http://localhost:8080/api/images/profile/${profileid}`,
+                `http://localhost:8080/api/image`,
                 formData,
                 {
                     headers: {
@@ -52,7 +52,7 @@ const ImageUploadS3 = (props) => {
     };
 
     useEffect(() => {
-        axios.get(`process.env.REACT_APP_URL:8080/api/image/${imageData.id}`)
+        axios.get(`http://localhost:8080/api/image/${imageData.id}`)
             .then((res) => {
                 setDisplayImage(res.data)
                 console.log("get data", res.data)

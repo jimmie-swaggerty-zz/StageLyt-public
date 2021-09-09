@@ -15,7 +15,7 @@ const EventCard = (props) => {
 
     //pull producer profiles
     useEffect(() => {
-        axios.get(`process.env.REACT_APP_URL:8080/api/events/${event_id}`)
+        axios.get(`http://localhost:8080/api/events/${event_id}`)
             .then((res) => {
                 console.log("res data get producers", res.data);
                 setEvent(res.data)

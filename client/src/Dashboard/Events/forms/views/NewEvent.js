@@ -10,7 +10,7 @@ const NewEvent = (props) => {
     const submitHandler = (formData) => {
         // e.preventDefault();
             // do some stuff
-        axios.post('process.env.REACT_APP_URL:8080/api/events', formData,{})
+        axios.post('http://localhost:8080/api/events', formData,{})
           .then((res) => {
             console.log(res.data);
             history.push(`/dashboard/events/update/${res.data.id}`);

@@ -12,7 +12,7 @@ const ProducerCard = (props) => {
 
     //pull producer profiles
     useEffect(() => {
-        axios.get(`process.env.REACT_APP_URL:8080/artists/byprofile/${profile_id}`)
+        axios.get(`http://localhost:8080/artists/byprofile/${profile_id}`)
             .then((res) => {
                 console.log("res data get producers", res.data[0]);
                 setProducer(res.data[0])

@@ -11,7 +11,7 @@ const Cities = (props) => {
     // const {myPokes} = props
     useEffect(() => {
         axios
-            .get(`process.env.REACT_APP_URL:8080/api/cities`)
+            .get(`http://localhost:8080/api/cities`)
             .then((res) => {
                 console.log(res.data);
                 setCities(res.data);
