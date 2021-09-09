@@ -7,7 +7,7 @@ const ComingSoon = () => {
     const [submitMessage, setSubmitMessage] = useState("")
 
     const submit = () => {
-        axios.post(`:8080/api/subscribe`, formData)
+        axios.post(`http://stagelyte.app:8080/api/subscribe`, formData)
             .then((res) => {
                 console.log(res);
                 setSubmitMessage("Thank you for subscribing!")
