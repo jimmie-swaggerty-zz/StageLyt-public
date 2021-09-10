@@ -35,7 +35,7 @@ require("./routes/page.routes.js")(app);
 require("./routes/subscriber.routes.js")(app);
 require("./routes/city.routes.js")(app);
 require("./routes/booking.routes.js")(app);
-require("./routes/s3image.routes.js")(app);
+require("./routes/s3image.routes.js.js")(app);
 
 // set port, listen for requests
 app.listen(port, () => {
