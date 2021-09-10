@@ -35,6 +35,6 @@ require("./routes/booking.routes.js")(app);
 
 
 // set port, listen for requests
-app.listen(8000, () => {
-  console.log(`Server is running on port 8000.`);
+app.listen(8080, () => {
+  console.log(`Server is running on port 8080.`);
 });
