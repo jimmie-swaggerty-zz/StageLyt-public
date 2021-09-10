@@ -17,7 +17,7 @@ const Page = (props) => {
     const defaultBanner =""
 
     useEffect(() => {
-        axios.get(`http://localhost:8000/api/pages/${id}`)
+        axios.get(`http://localhost:8080/api/pages/${id}`)
             .then((res) => {
                 console.log(res.data)
                 setData(res.data)
@@ -27,14 +27,14 @@ const Page = (props) => {
 
     useEffect(() => {
         if (type !== "venue") {
-            axios.get(`http://localhost:8000/api/bookings/bypage/${id}`)
+            axios.get(`http://localhost:8080/api/bookings/bypage/${id}`)
                 .then((res) => {
                     console.log(res.data)
                     setEvents(res.data)
                 })
         }
         else {
-            axios.get(`http://localhost:8000/api/events/byvenue/${id}`)
+            axios.get(`http://localhost:8080/api/events/byvenue/${id}`)
                 .then((res) => {
                     console.log(res.data)
                     setEvents(res.data)

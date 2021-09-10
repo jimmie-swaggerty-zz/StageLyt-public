@@ -13,7 +13,7 @@ const EventAccounting = (props) => {
     //Get Artists
     useEffect(() => {
         axios
-            .get(`http://localhost:8000/pages/category/artist`)
+            .get(`http://localhost:8080/pages/category/artist`)
             .then((res) => {
                 console.log(res.data);
                 setArtists(res.data);
@@ -26,7 +26,7 @@ const EventAccounting = (props) => {
     //Submit a new booking
     const submitHandler = (e) => {
         axios
-            .post(`http://localhost:8000/api/bookings`, ({ data: input, event_id: event_id, producer_id: producer_id, artist_status: "pending", producer_status: "draft" }))
+            .post(`http://localhost:8080/api/bookings`, ({ data: input, event_id: event_id, producer_id: producer_id, artist_status: "pending", producer_status: "draft" }))
             .then((res) => {
                 console.log(res.data);
                 updateBookings()
@@ -39,7 +39,7 @@ const EventAccounting = (props) => {
     //pull bookings
     useEffect(() => {
         axios
-            .get(`http://localhost:8000/api/bookings/events/${event_id}`)
+            .get(`http://localhost:8080/api/bookings/events/${event_id}`)
             .then((res) => {
                 console.log("bookings are", res.data);
                 setBookings(res.data);
@@ -52,7 +52,7 @@ const EventAccounting = (props) => {
     //to update bookings post submit
     const updateBookings = () => {
         axios
-        .get(`http://localhost:8000/api/bookings/events/${event_id}`)
+        .get(`http://localhost:8080/api/bookings/events/${event_id}`)
         .then((res) => {
             console.log("bookings are", res.data);
             setBookings(res.data);
@@ -63,7 +63,7 @@ const EventAccounting = (props) => {
     }
 
     const removeBooking = (id) => {
-        axios.delete(`http://localhost:8000/api/bookings/${id}/`)
+        axios.delete(`http://localhost:8080/api/bookings/${id}/`)
         .then((res)=>{
             console.log(res);
             updateBookings()

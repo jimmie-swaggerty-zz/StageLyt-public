@@ -53,7 +53,7 @@ const EventsGeneralInfo = (props) => {
     }
     useEffect(() => {
         axios
-            .get(`http://localhost:8000/api/pages`)
+            .get(`http://localhost:8080/api/pages`)
             .then((res) => {
                 console.log(res.data);
                 setProducers(res.data);
@@ -66,7 +66,7 @@ const EventsGeneralInfo = (props) => {
 
     useEffect(() => {
         axios
-            .get(`http://localhost:8000/pages/category/venue`)
+            .get(`http://localhost:8080/pages/category/venue`)
             .then((res) => {
                 console.log(res.data);
                 setVenues(res.data);

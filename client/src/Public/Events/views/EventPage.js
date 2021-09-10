@@ -13,7 +13,7 @@ const EventPage = (props) => {
     const { id } = useParams()
     useEffect(() => {
         axios
-            .get(`http://localhost:8000/api/events/${id}`)
+            .get(`http://localhost:8080/api/events/${id}`)
             .then((res) => {
                 console.log("event", res.data);
                 setEvent(res.data);

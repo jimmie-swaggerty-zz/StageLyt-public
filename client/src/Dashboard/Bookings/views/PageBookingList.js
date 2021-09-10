@@ -13,7 +13,7 @@ const PageBookingList = (props) => {
 
     const updateStatus = () => {
         axios
-            .get(`http://localhost:8000/api/bookings/bypage/${page_id}`)
+            .get(`http://localhost:8080/api/bookings/bypage/${page_id}`)
             .then((res) => {
                 // console.log("bookings by page", res.data);
                 setBookingList(res.data);
@@ -29,7 +29,7 @@ const PageBookingList = (props) => {
     //get page info
     useEffect(() => {
         axios
-            .get(`http://localhost:8000/api/pages/${page_id}`)
+            .get(`http://localhost:8080/api/pages/${page_id}`)
             .then((res) => {
                 // console.log("page", res.data);
                 setPage(res.data);

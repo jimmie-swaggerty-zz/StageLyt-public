@@ -7,7 +7,7 @@ const ComingSoon = () => {
     const [submitMessage, setSubmitMessage] = useState("")
 
     const submit = () => {
-        axios.post(`http://localhost:8000/api/subscribe`, formData)
+        axios.post(`http://localhost:8080/api/subscribe`, formData)
             .then((res) => {
                 console.log(res);
                 setSubmitMessage("Thank you for subscribing!")

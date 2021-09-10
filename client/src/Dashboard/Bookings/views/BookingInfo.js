@@ -15,7 +15,7 @@ const BookingInfo = props => {
     const updateStatus = (status) => {
         console.log(booking.id)
         console.log(status)
-        axios.put(`http://localhost:8000/api/bookings/accept/${booking.id}`, { status: status })
+        axios.put(`http://localhost:8080/api/bookings/accept/${booking.id}`, { status: status })
             .then((res) => {
                 console.log("booking info booking", res.data);
             })
@@ -26,7 +26,7 @@ const BookingInfo = props => {
     }
     useEffect(() => {
         axios
-            .get(`http://localhost:8000/api/bookings/${booking_id}`)
+            .get(`http://localhost:8080/api/bookings/${booking_id}`)
             .then((res) => {
                 console.log("booking", res.data);
                 setBooking(res.data);
@@ -38,7 +38,7 @@ const BookingInfo = props => {
     }, []);
     useEffect(() => {
         axios
-            .get(`http://localhost:8000/api/events/${booking.event_id}`)
+            .get(`http://localhost:8080/api/events/${booking.event_id}`)
             .then((res) => {
                 console.log("event", res.data);
                 setEvent(res.data);

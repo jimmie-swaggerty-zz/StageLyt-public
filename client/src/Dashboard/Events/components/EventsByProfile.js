@@ -8,7 +8,7 @@ const EventsByProfile = (props) => {
     console.log("Events by profile profile:", profile)
     useEffect(() => {
         axios
-            .get(`http://localhost:8000/events/byprofile/${profile.id}`)
+            .get(`http://localhost:8080/events/byprofile/${profile.id}`)
             .then((res) => {
                 console.log(res.data);
                 setEvents(res.data);
@@ -19,7 +19,7 @@ const EventsByProfile = (props) => {
     }, [profile.id]);
     useEffect(() => {
         axios
-            .get(`http://localhost:8000/artists/${profile.id}`)
+            .get(`http://localhost:8080/artists/${profile.id}`)
             .then((res) => {
                 console.log("artist request",res.data);
                 setArtist(res.data);

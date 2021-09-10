@@ -10,7 +10,7 @@ const Producers = (props) => {
     // const {myPokes} = props
     useEffect(() => {
         axios
-            .get(`http://localhost:8000/pages/category/producer`)
+            .get(`http://localhost:8080/pages/category/producer`)
             .then((res) => {
                 console.log(res.data);
                 setPages(res.data);
