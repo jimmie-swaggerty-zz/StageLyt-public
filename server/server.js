@@ -30,12 +30,11 @@ app.get("/ ", (req, res) => {
 require("./routes/user.routes.js")(app);
 require("./routes/event.routes.js")(app);
 require("./routes/externalServ/googleAuth.routes.js")(app);
-// require("./routes/image.routes.js")(app);
 require("./routes/page.routes.js")(app);
 require("./routes/subscriber.routes.js")(app);
 require("./routes/city.routes.js")(app);
 require("./routes/booking.routes.js")(app);
-require("./routes/s3image.routes.js.js")(app);
+
 
 // set port, listen for requests
 app.listen(port, () => {
