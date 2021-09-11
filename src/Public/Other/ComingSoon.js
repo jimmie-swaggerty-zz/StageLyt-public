@@ -5,6 +5,7 @@ import logo from '../../Images/StageLyt-08.png'
 const ComingSoon = () => {
     const [formData, setFormData] = useState([])
     const [submitMessage, setSubmitMessage] = useState("")
+    console.log('http://localhost:8080')
 
     const submit = () => {
         axios.post(`http://localhost:8080/api/subscribe`, formData)
