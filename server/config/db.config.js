@@ -1,6 +1,6 @@
   module.exports = {
-    HOST: "stagelyt.cal8jirlbdvh.us-east-2.rds.amazonaws.com",
-    USER: "admin",
+    HOST: "localhost",
+    USER: "root",
     PASSWORD: process.env.MY_PASSWORD,
     DB: "stagelyt",
     dialect: "mysql",
