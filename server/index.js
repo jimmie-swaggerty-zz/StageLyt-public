@@ -19,11 +19,6 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use(express.static(__dirname+'/'));
 
-// simple route
-app.get("/ ", (req, res) => {
-  res.json({ message: "Welcome to my application." });
-});
-
 //connect routes to server
 require("./routes/user.routes.js")(app);
 require("./routes/event.routes.js")(app);
@@ -35,6 +30,6 @@ require("./routes/booking.routes.js")(app);
 
 
 // set port, listen for requests
-app.listen(8080, () => {
+app.listen(process.env.MY_PORT || PORT, () => {
   console.log(`Server is running on port 8080.`);
 });
