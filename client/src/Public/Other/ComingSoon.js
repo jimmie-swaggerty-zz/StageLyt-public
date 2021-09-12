@@ -5,10 +5,10 @@ import logo from '../../Images/StageLyt-08.png'
 const ComingSoon = () => {
     const [formData, setFormData] = useState([])
     const [submitMessage, setSubmitMessage] = useState("")
-    console.log('http://localhost:8080')
+    console.log('http://https://stagelyt-mysql.herokuapp.com')
 
     const submit = () => {
-        axios.post(`http://localhost:8080/api/subscribe`, formData)
+        axios.post(`http://https://stagelyt-mysql.herokuapp.com/api/subscribe`, formData)
             .then((res) => {
                 console.log(res);
                 setSubmitMessage("Thank you for subscribing!")

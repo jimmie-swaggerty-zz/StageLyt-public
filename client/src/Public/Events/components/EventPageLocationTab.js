@@ -5,7 +5,7 @@ const EventPageLocationTab = (props) => {
     const { id } = props
     const [venue, setVenue] = useState({})
     useEffect(() => {
-        axios.get(`http://localhost:8080/api/pages/${props.id}`)
+        axios.get(`http://https://stagelyt-mysql.herokuapp.com/api/pages/${props.id}`)
             .then((res) => {
                 console.log(res)
                 setVenue(res.data)

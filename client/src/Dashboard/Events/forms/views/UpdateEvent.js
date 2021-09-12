@@ -11,7 +11,7 @@ const UpdateEvent = (props) => {
     const history = useHistory()
     const updateHandler=(data)=>{
                 // do some stuff
-                axios.put(`http://localhost:8080/api/events/update/${id}`, data,{})
+                axios.put(`http://https://stagelyt-mysql.herokuapp.com/api/events/update/${id}`, data,{})
                 .then((res) => {
                   console.log(res.data);
                   history.push('/events')
@@ -23,7 +23,7 @@ const UpdateEvent = (props) => {
     }
     useEffect(() => {
         axios
-            .get(`http://localhost:8080/api/events/${id}`)
+            .get(`http://https://stagelyt-mysql.herokuapp.com/api/events/${id}`)
             .then((res) => {
                 console.log(res.data);
                 setInitialData(res.data);

@@ -8,7 +8,7 @@ const ProducerLink = (props) => {
 
 
     useEffect(() => {
-        axios.get(`http://localhost:8080/api/pages/${id}`)
+        axios.get(`http://https://stagelyt-mysql.herokuapp.com/api/pages/${id}`)
             .then((res) => {
                 console.log("res data get producer", res.data);
                 setProducer(res.data)

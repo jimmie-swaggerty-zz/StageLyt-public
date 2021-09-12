@@ -3,7 +3,7 @@ import { GoogleLogin, GoogleLogout } from "react-google-login";
 
 const Login = () => {
 //   const handleLogin = async googleData => {
-//     const res = await fetch("http://localhost:8080/api/v1/auth/google", {
+//     const res = await fetch("http://https://stagelyt-mysql.herokuapp.com/api/v1/auth/google", {
 //       method: "POST",
 //       body: JSON.stringify({
 //         token: googleData.tokenId

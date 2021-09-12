@@ -5,6 +5,8 @@ require("dotenv").config();
 
 const app = express();
 
+const PORT = 4348
+
 var corsOptions = {
   origin: "*"
 };
@@ -28,8 +30,9 @@ require("./routes/subscriber.routes.js")(app);
 require("./routes/city.routes.js")(app);
 require("./routes/booking.routes.js")(app);
 
+app.set('port', (process.env.PORT || PORT));
 
-// set port, listen for requests
-app.listen(process.env.MY_PORT || PORT, () => {
-  console.log(`Server is running on port 8080.`);
+
+app.listen(app.get('port'), function() {
+  console.log('Node app is running on port', app.get('port'));
 });
