@@ -11,7 +11,7 @@ const PageUpdate = (props) => {
   console.log(id)
   const updateHandler=(data)=>{
               // do some stuff
-              axios.put(`http://https://stagelyt-mysql.herokuapp.com/api/pages`, data ,{})
+              axios.put(`https://stagelyt-mysql.herokuapp.com/api/pages`, data ,{})
               .then((res) => {
                 console.log(res.data);
                 history.push(`/${id}`)
@@ -23,7 +23,7 @@ const PageUpdate = (props) => {
   }
   useEffect(() => {
       axios
-          .get(`http://https://stagelyt-mysql.herokuapp.com/api/pages/${id}`)
+          .get(`https://stagelyt-mysql.herokuapp.com/api/pages/${id}`)
           .then((res) => {
               console.log("res data for page form",res.data);
              setInitialData(res.data);

@@ -10,7 +10,7 @@ const NewEvent = (props) => {
     const submitHandler = (formData) => {
         // e.preventDefault();
             // do some stuff
-        axios.post('http://https://stagelyt-mysql.herokuapp.com/api/events', formData,{})
+        axios.post('https://stagelyt-mysql.herokuapp.com/api/events', formData,{})
           .then((res) => {
             console.log(res.data);
             history.push(`/dashboard/events/update/${res.data.id}`);

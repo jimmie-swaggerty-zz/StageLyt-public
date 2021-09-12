@@ -53,7 +53,7 @@ const EventsGeneralInfo = (props) => {
     }
     useEffect(() => {
         axios
-            .get(`http://https://stagelyt-mysql.herokuapp.com/api/pages`)
+            .get(`https://stagelyt-mysql.herokuapp.com/api/pages`)
             .then((res) => {
                 console.log(res.data);
                 setProducers(res.data);
@@ -66,7 +66,7 @@ const EventsGeneralInfo = (props) => {
 
     useEffect(() => {
         axios
-            .get(`http://https://stagelyt-mysql.herokuapp.com/pages/category/venue`)
+            .get(`https://stagelyt-mysql.herokuapp.com/pages/category/venue`)
             .then((res) => {
                 console.log(res.data);
                 setVenues(res.data);

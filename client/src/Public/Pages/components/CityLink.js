@@ -5,7 +5,7 @@ const CityLink = (props) =>{
     const {id} = props
     const [city, setCity] = useState([])
     useEffect(() => {
-        axios.get(`http://https://stagelyt-mysql.herokuapp.com/api/cities/${id}`)
+        axios.get(`https://stagelyt-mysql.herokuapp.com/api/cities/${id}`)
             .then((res) => {
                 console.log(res.data)
                 setCity(res.data)

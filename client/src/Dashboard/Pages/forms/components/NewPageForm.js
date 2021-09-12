@@ -32,7 +32,7 @@ const NewPageForm = (props) => {
 
     //Submit
     const submitHandler = () => {
-        axios.post(`http://https://stagelyt-mysql.herokuapp.com/api/pages/${user_id}`, formData, {})
+        axios.post(`https://stagelyt-mysql.herokuapp.com/api/pages/${user_id}`, formData, {})
             .then((res) => {
                 console.log(res.data);
                 history.push(`/dashboard/pages/update/${res.data.page_id}`);

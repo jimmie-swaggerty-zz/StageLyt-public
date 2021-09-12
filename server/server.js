@@ -5,13 +5,14 @@ require("dotenv").config();
 
 const app = express();
 
-const PORT = 4348
-
 var corsOptions = {
-  origin: "*"
+  origin: "*",
 };
 
+
 app.use(cors(corsOptions));
+
+
 
 // parse requests of content-type: application/json
 app.use(bodyParser.json());
@@ -32,7 +33,13 @@ require("./routes/booking.routes.js")(app);
 
 app.set('port', (process.env.PORT || PORT));
 
+// simple route
+app.get("/", (req, res) => {
+  res.json({ message: "Welcome to my application." });
+});
+
 
 app.listen(app.get('port'), function() {
   console.log('Node app is running on port', app.get('port'));
 });
+

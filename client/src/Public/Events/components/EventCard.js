@@ -15,7 +15,7 @@ const EventCard = (props) => {
 
     //pull producer profiles
     useEffect(() => {
-        axios.get(`http://https://stagelyt-mysql.herokuapp.com/api/events/${event_id}`)
+        axios.get(`https://stagelyt-mysql.herokuapp.com/api/events/${event_id}`)
             .then((res) => {
                 console.log("res data get producers", res.data);
                 setEvent(res.data)

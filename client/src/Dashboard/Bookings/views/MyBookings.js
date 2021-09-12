@@ -17,7 +17,7 @@ const MyBookings = () => {
 
     //get pages owned
     useEffect(() => {
-        axios.get(`http://https://stagelyt-mysql.herokuapp.com/api/pages/mypages/${user_id}`)
+        axios.get(`https://stagelyt-mysql.herokuapp.com/api/pages/mypages/${user_id}`)
             .then((res) => {
                 console.log(res.data)
                 setPages(res.data)

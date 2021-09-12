@@ -7,7 +7,7 @@ const ArtistSquare = props => {
     const [artist, setArtist] = useState([])
 
     useEffect(() => {
-        axios.get(`http://https://stagelyt-mysql.herokuapp.com/api/pages/${id}`)
+        axios.get(`https://stagelyt-mysql.herokuapp.com/api/pages/${id}`)
         .then((res)=>{
             setArtist(res.data)
             console.log("artist is ", res.data)

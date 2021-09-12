@@ -17,7 +17,7 @@ const Page = (props) => {
     const defaultBanner =""
 
     useEffect(() => {
-        axios.get(`http://https://stagelyt-mysql.herokuapp.com/api/pages/${id}`)
+        axios.get(`https://stagelyt-mysql.herokuapp.com/api/pages/${id}`)
             .then((res) => {
                 console.log(res.data)
                 setData(res.data)
@@ -27,14 +27,14 @@ const Page = (props) => {
 
     useEffect(() => {
         if (type !== "venue") {
-            axios.get(`http://https://stagelyt-mysql.herokuapp.com/api/bookings/bypage/${id}`)
+            axios.get(`https://stagelyt-mysql.herokuapp.com/api/bookings/bypage/${id}`)
                 .then((res) => {
                     console.log(res.data)
                     setEvents(res.data)
                 })
         }
         else {
-            axios.get(`http://https://stagelyt-mysql.herokuapp.com/api/events/byvenue/${id}`)
+            axios.get(`https://stagelyt-mysql.herokuapp.com/api/events/byvenue/${id}`)
                 .then((res) => {
                     console.log(res.data)
                     setEvents(res.data)

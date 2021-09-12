@@ -14,7 +14,7 @@ const ImageDisplayS3 = (props) => {
     },[displayImage])
 
     useEffect(() => {
-        axios.get(`http://https://stagelyt-mysql.herokuapp.com/api/image/${imageURL}`)
+        axios.get(`https://stagelyt-mysql.herokuapp.com/api/image/${imageURL}`)
             .then((res) => {
                 setDisplayImage(res.data)
                 console.log("get data", res.data)

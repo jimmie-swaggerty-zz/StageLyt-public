@@ -17,7 +17,7 @@ const MyEvents = (props) => {
         const globalDispatch = globalStateAndDispatch.dispatch
         
         useEffect(()=>{
-            axios.get('http://https://stagelyt-mysql.herokuapp.com/api/events/').then((res) => {
+            axios.get('https://stagelyt-mysql.herokuapp.com/api/events/').then((res) => {
                 console.log(res.data);
                 setEvents(res.data);
             })

@@ -14,7 +14,7 @@ const CityCard = (props) => {
 
     //pull city profiles
     useEffect(() => {
-        axios.get(`http://https://stagelyt-mysql.herokuapp.com/api/cities/${city_id}`)
+        axios.get(`https://stagelyt-mysql.herokuapp.com/api/cities/${city_id}`)
             .then((res) => {
                 console.log("res data get cities", res.data);
                 setCity(res.data)

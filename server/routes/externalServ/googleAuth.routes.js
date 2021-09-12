@@ -1,14 +1,14 @@
 
 module.exports = (app) => {
     const { OAuth2Client } = require("google-auth-library");
-    const client = new OAuth2Client(process.env.REACT_APP_CLIENT_ID);
+    const client = new OAuth2Client(process.env.REACT_APP_CLIENT_ID || CLIENT_ID);
     const sql = require("../../models/db");
 
     app.post("/api/v1/auth/google", async (req, result) => {
         const { token } = req.body;
         const ticket = await client.verifyIdToken({
             idToken: token,
-            audience: process.env.REACT_APP_CLIENT_ID,
+            audience: process.env.REACT_APP_CLIENT_ID || CLIENT_ID,
         });
         const { email } = ticket.getPayload();
 

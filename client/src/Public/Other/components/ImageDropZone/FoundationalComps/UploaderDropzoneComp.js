@@ -18,8 +18,8 @@ const handleChangeStatus = (files) => {
 
     axios
         .post(
-            // `http://https://stagelyt-mysql.herokuapp.com/api/images/profile/${profileid}`,
-            `http://https://stagelyt-mysql.herokuapp.com/api/image`,
+            // `https://stagelyt-mysql.herokuapp.com/api/images/profile/${profileid}`,
+            `https://stagelyt-mysql.herokuapp.com/api/image`,
             formData,
             {
                 headers: {
