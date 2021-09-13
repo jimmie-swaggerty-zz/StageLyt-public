@@ -10,7 +10,7 @@ const LocalVenuesScroll = (props) => {
     const [loaded, setLoaded] = useState(false)
 
     useEffect(()=> {
-        axios.get('http://localhost:8080/venues')
+        axios.get('https://stagelyt-mysql.herokuapp.com/venues')
         .then((res) => {
             console.log(res.data);
             setVenues(res.data)

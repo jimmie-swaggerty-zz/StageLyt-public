@@ -13,7 +13,7 @@ const ProducerPage = (props) => {
     const { id } = useParams()
 
     useEffect(() => {
-        axios.get(`http://localhost:8080/api/pages/${id}`)
+        axios.get(`https://stagelyt-mysql.herokuapp.com/api/pages/${id}`)
             .then((res) => {
                 console.log(res.data)
                 setData(res.data)
@@ -21,7 +21,7 @@ const ProducerPage = (props) => {
     }, [id])
 
     useEffect(() => {
-        axios.get(`http://localhost:8080/api/events/byprofile/${id}`)
+        axios.get(`https://stagelyt-mysql.herokuapp.com/api/events/byprofile/${id}`)
             .then((res) => {
                 console.log(res.data)
                 setEvents(res.data)

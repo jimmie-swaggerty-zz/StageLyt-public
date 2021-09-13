@@ -11,7 +11,7 @@ const EventPageCast = (props) => {
     const [cast, setCast] = useState([])
     const history = useHistory()
     useEffect(() => {
-        axios.get(`http://localhost:8080/api/bookings/events/approve/${props.id}`)
+        axios.get(`https://stagelyt-mysql.herokuapp.com/api/bookings/events/approve/${props.id}`)
             .then((res) => {
                 console.log(res)
                 setCast(res.data)

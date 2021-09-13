@@ -49,7 +49,7 @@ const SlugInput = (props) => {
             setMessage(messageSigns.short)
         }
         else{
-            axios.get(`http://localhost:8080/profiles/bySlug/${slugInput}`)
+            axios.get(`https://stagelyt-mysql.herokuapp.com/profiles/bySlug/${slugInput}`)
                 .then((res) => {
                     console.log("Slug check results: ", res)
                     if (res.status === 500 ){

@@ -5,16 +5,16 @@ import logo from '../../Images/StageLyt-08.png'
 const ComingSoon = () => {
     const [formData, setFormData] = useState([])
     const [submitMessage, setSubmitMessage] = useState("")
+    console.log('https://stagelyt-mysql.herokuapp.com')
 
     const submit = () => {
-        axios.post(`http://localhost:8080/api/subscribe`, formData)
+        axios.post(`https://stagelyt-mysql.herokuapp.com/api/subscribe`, formData)
             .then((res) => {
                 console.log(res);
                 setSubmitMessage("Thank you for subscribing!")
             })
             .catch((err) => {
-                console.log(err.response);
-                setSubmitMessage("Please complete the form")
+                console.log(err.response)
             })
     }
 
@@ -43,7 +43,7 @@ const ComingSoon = () => {
                                 </div>
                                 <div className="mb-3">
                                     <select type="text" name="type" placeholder="Type" className="form-select text-center" onChange={e => { e.preventDefault(); inputChange(e) }} >
-                                        <option selected>What type of user are you?</option>
+                                        <option defaultValue>What type of user are you?</option>
                                         <option value="producer">Producer</option>
                                         <option value="artist">Artist</option>
                                         <option value="venue">Venue</option>

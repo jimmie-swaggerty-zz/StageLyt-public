@@ -6,10 +6,13 @@ require("dotenv").config();
 const app = express();
 
 var corsOptions = {
-  origin: "*"
+  origin: "*",
 };
 
+
 app.use(cors(corsOptions));
+
+
 
 // parse requests of content-type: application/json
 app.use(bodyParser.json());
@@ -18,11 +21,6 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use(express.static(__dirname+'/'));
-
-// simple route
-app.get("/ ", (req, res) => {
-  res.json({ message: "Welcome to my application." });
-});
 
 //connect routes to server
 require("./routes/user.routes.js")(app);
@@ -33,8 +31,15 @@ require("./routes/subscriber.routes.js")(app);
 require("./routes/city.routes.js")(app);
 require("./routes/booking.routes.js")(app);
 
+app.set('port', (process.env.PORT || PORT));
 
-// set port, listen for requests
-app.listen(8080, () => {
-  console.log(`Server is running on port 8080.`);
+// simple route
+app.get("/", (req, res) => {
+  res.json({ message: "Welcome to my application." });
 });
+
+
+app.listen(app.get('port'), function() {
+  console.log('Node app is running on port', app.get('port'));
+});
+

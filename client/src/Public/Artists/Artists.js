@@ -10,7 +10,7 @@ const Artists = (props) => {
     // const {myPokes} = props
     useEffect(() => {
         axios
-            .get(`http://localhost:8080/pages/category/artist`)
+            .get(`https://stagelyt-mysql.herokuapp.com/pages/category/artist`)
             .then((res) => {
                 console.log(res.data);
                 setPages(res.data);

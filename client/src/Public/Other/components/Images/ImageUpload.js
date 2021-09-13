@@ -35,8 +35,8 @@ const ImageUploadS3 = (props) => {
 
         axios
             .post(
-                // `http://localhost:8080/api/images/profile/${profileid}`,
-                `http://localhost:8080/api/image`,
+                // `https://stagelyt-mysql.herokuapp.com/api/images/profile/${profileid}`,
+                `https://stagelyt-mysql.herokuapp.com/api/image`,
                 formData,
                 {
                     headers: {
@@ -52,7 +52,7 @@ const ImageUploadS3 = (props) => {
     };
 
     useEffect(() => {
-        axios.get(`http://localhost:8080/api/image/${imageData.id}`)
+        axios.get(`https://stagelyt-mysql.herokuapp.com/api/image/${imageData.id}`)
             .then((res) => {
                 setDisplayImage(res.data)
                 console.log("get data", res.data)

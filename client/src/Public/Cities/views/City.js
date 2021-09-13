@@ -19,14 +19,14 @@ const City = (props) => {
     const { id } = useParams()
 
     useEffect(() => {
-        axios.get(`http://localhost:8080/api/cities/${id}`)
+        axios.get(`https://stagelyt-mysql.herokuapp.com/api/cities/${id}`)
             .then((res) => {
                 console.log(res.data)
                 setData(res.data)
             })
     }, [id])
     useEffect(() => {
-        axios.get(`http://localhost:8080/api/pages/bycity/${id}`)
+        axios.get(`https://stagelyt-mysql.herokuapp.com/api/pages/bycity/${id}`)
             .then((res) => {
                 console.log("pages are", res.data)
                 setPages(res.data)
@@ -34,7 +34,7 @@ const City = (props) => {
     }, [id])
 
     useEffect(() => {
-        axios.get(`http://localhost:8080/api/events`)
+        axios.get(`https://stagelyt-mysql.herokuapp.com/api/events`)
             .then((res) => {
                 console.log(res.data)
                 setEvents(res.data)

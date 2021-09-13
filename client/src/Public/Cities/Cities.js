@@ -11,7 +11,7 @@ const Cities = (props) => {
     // const {myPokes} = props
     useEffect(() => {
         axios
-            .get(`http://localhost:8080/api/cities`)
+            .get(`https://stagelyt-mysql.herokuapp.com/api/cities`)
             .then((res) => {
                 console.log(res.data);
                 setCities(res.data);

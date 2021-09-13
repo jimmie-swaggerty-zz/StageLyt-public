@@ -7,7 +7,7 @@ const BookingLine = props => {
     const page_id = data.artist_id
 
     useEffect(() => {
-        axios.get(`http://localhost:8080/api/pages/${page_id}`)
+        axios.get(`https://stagelyt-mysql.herokuapp.com/api/pages/${page_id}`)
             .then((res) => {
                 console.log("this is the artist", res.data);
                 setArtist(res.data)
@@ -18,7 +18,7 @@ const BookingLine = props => {
     const updateStatus = (status) => {
         console.log(data.id)
         console.log(status)
-        axios.put(`http://localhost:8080/api/bookings/send/${data.id}`, {status: status})
+        axios.put(`https://stagelyt-mysql.herokuapp.com/api/bookings/send/${data.id}`, {status: status})
             .then((res) => {
                 console.log("booking info booking",res.data);
                 updateBookings()

@@ -14,7 +14,7 @@ const PageCard = (props) => {
 
     //pull page profiles
     useEffect(() => {
-        axios.get(`http://localhost:8080/api/pages/${page_id}`)
+        axios.get(`https://stagelyt-mysql.herokuapp.com/api/pages/${page_id}`)
             .then((res) => {
                 console.log("res data get pages", res.data);
                 setPage(res.data)
